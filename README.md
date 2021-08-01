@@ -1,6 +1,4 @@
 # 1D Metropolis Sampling
-
-![Header](https://github.com/WeiPhil/metropolis_1d/raw/master/preview.png)
 ## Overview
 
 A quick helper tool written in Rust to visualise and play with metropolis sampling in the one-dimensional case.
