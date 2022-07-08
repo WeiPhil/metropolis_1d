@@ -1,6 +1,6 @@
 use crate::pcg32::Pcg32;
 
-pub type Function = dyn Fn(f32) -> f32 + 'static;
+pub type Function<T> = dyn Fn(T) -> T + 'static;
 
 /// A Metropolis sampler that stores a sequence of generated samples
 /// and the normalisation factor of the target function.
@@ -43,7 +43,7 @@ impl Metropolis {
     ///         record(X, 1)
     pub fn gen_sample_sequence(
         seed: u64,
-        f_and_norm: &(Box<Function>, f32),
+        f_and_norm: &(Box<Function<f32>>, f32),
         metropolis_samples: usize,
         burn_in_samples: usize,
         mut small_mutate_prob: f32,

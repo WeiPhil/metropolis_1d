@@ -7,7 +7,7 @@ pub enum FunctionType {
     None,
 }
 
-pub fn shifted_square_and_norm() -> (Box<Function>, f32) {
+pub fn shifted_square_and_norm() -> (Box<Function<f32>>, f32) {
     (
         Box::new(|x: f32| -> f32 {
             if (0.0..=1.0).contains(&x) {
@@ -28,7 +28,7 @@ pub fn shifted_square_f64(x: f64) -> f64 {
     }
 }
 
-pub fn sinus_and_norm() -> (Box<Function>, f32) {
+pub fn sinus_and_norm() -> (Box<Function<f32>>, f32) {
     (
         Box::new(|x: f32| -> f32 {
             if (0.0..=1.0).contains(&x) {
